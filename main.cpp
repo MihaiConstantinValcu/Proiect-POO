@@ -171,7 +171,7 @@ int main() {
 
     Gradina.afisare();
     GradinaVecinului.afisare();
-    Padure.afisare();
+    PadureNorvegiana.afisare();
     Padure.afisare();
 
 
