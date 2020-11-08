@@ -1,3 +1,0 @@
-"D:\Programs\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\ProiectPOO.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\ProiectPOO.dir/objects.a @CMakeFiles\ProiectPOO.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -Wall -Wextra -pedantic -g   -Wl,--whole-archive CMakeFiles\ProiectPOO.dir/objects.a -Wl,--no-whole-archive  -o ProiectPOO.exe -Wl,--out-implib,libProiectPOO.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ProiectPOO.dir\linklibs.rsp

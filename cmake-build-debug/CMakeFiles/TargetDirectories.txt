@@ -1,3 +1,0 @@
-D:/Facultate/POO/ProiectPOO/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/Facultate/POO/ProiectPOO/cmake-build-debug/CMakeFiles/ProiectPOO.dir
-D:/Facultate/POO/ProiectPOO/cmake-build-debug/CMakeFiles/edit_cache.dir
