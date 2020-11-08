@@ -33,7 +33,7 @@ class Planta{
     std::string culoare;
 
 public:
-    Planta(std::string _specie, std::string _culoare = "\0"){
+    Planta(std::string _specie, std::string _culoare = ""){
         specie = _specie;
         culoare = _culoare;
     }
@@ -66,10 +66,12 @@ public:
         for(auto &i : _plante)
             plante.push_back(i);
 
+        std::cout<<"Biocenoza sistemului a fost populata.\n";
+
     }
-    Ecosistem(int _umiditate, int _temperatura, std::string _precipitatii):umiditate(_umiditate), temperatura(_temperatura),precipitii(_precipitatii){
-        std::ifstream f("animale.txt");
-        std::ifstream g("plante.txt");
+    Ecosistem(int _umiditate, int _temperatura, std::string _precipitatii, std::string inputAnimale, std::string inputPlante):umiditate(_umiditate), temperatura(_temperatura),precipitii(_precipitatii){
+        std::ifstream f(inputAnimale);
+        std::ifstream g(inputPlante);
 
         std::string _specie, _rasa, _culoare;
         int _varsta;
@@ -116,8 +118,7 @@ public:
     }
 
     ~Ecosistem(){
-        animale.~vector<Animal>();
-        plante.~vector<Planta>();
+        std::cout<<"Biocenoza ecosistemului a fost dusa la extinctie.\n";
     }
 
     void afisare(){
@@ -145,6 +146,9 @@ public:
 
 int main() {
 
+    const std::string inputAnimale = "Date/animale.txt";
+    const std::string inputPlante = "Date/plante.txt";
+
     //Testez metodele din clasele Animal si Planta
     Animal animal1("pisica","bengaleza",6);
     Animal animal2("caine","shiba",3);
@@ -166,7 +170,7 @@ int main() {
 
     Ecosistem Gradina(animale,plante,50,24,"Ploaie");
     Ecosistem GradinaVecinului(Gradina);
-    Ecosistem PadureNorvegiana(40,32,"Senin");
+    Ecosistem PadureNorvegiana(40,32,"Senin",inputAnimale,inputPlante);
     Ecosistem Padure = PadureNorvegiana;
 
     Gradina.afisare();
