@@ -8,7 +8,7 @@ void Tester::run(){
     std::cout<<"(*Animalele sunt grupate in colonii, iar plantele in soiuri.*)\n";
     std::cout<<"(*Totalitatea acestora si totalitatea factorilor abiotici formeaza un ecosistem*)\n\n";
     std::cout<<"Alege ce doresti sa testezi:"<<"\n1. Clasa Animal"<<"\n2. Clasa Colonie"<<"\n3. Clasa Planta"<<"\n4. Clasa Soi"<<"\n5. Clasa Ecosistem"<<"\n6. Clasa EcosistemArtificial\n";
-    char choice;
+    char choice = '0';
     std::cin>>choice;
 try{
     if(choice >= '1' && choice <= '6')
