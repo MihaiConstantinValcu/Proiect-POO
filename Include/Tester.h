@@ -3,8 +3,6 @@
 
 class Tester{
 public:
-    Tester();
-    ~Tester();
     void run();
     void testAnimal();
     void testColonie();

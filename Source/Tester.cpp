@@ -2,9 +2,6 @@
 #include <memory>
 #include <exception>
 
-Tester::Tester() = default;
-Tester::~Tester() = default;
-
 //Functionalitati
 
 void Tester::run(){
