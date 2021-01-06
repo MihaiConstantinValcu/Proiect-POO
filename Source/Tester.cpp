@@ -9,30 +9,30 @@ void Tester::run(){
     std::cout<<"(*Totalitatea acestora si totalitatea factorilor abiotici formeaza un ecosistem*)\n\n";
     std::cout<<"Alege ce doresti sa testezi:"<<"\n1. Clasa Animal"<<"\n2. Clasa Colonie"<<"\n3. Clasa Planta"<<"\n4. Clasa Soi"<<"\n5. Clasa Ecosistem"<<"\n6. Clasa EcosistemArtificial\n";
     char choice = '0';
+    try{
     std::cin>>choice;
-try{
-    if(choice >= '1' && choice <= '6')
-        switch (choice) {
-            case '1':
-              this->testAnimal();
-              break;
-          case '2':
-                this->testColonie();
-                break;
-            case '3':
-               this->testPlanta();
-               break;
-          case '4':
-              this->testSoi();
-             break;
-          case '5':
-             this->testEcosistem();
-             break;
-          case '6':
-             this->testEcosistemArtificial();
-              break;
+    if(choice < '1' || choice > '6')
+        throw "\nAi ales o optiune invalida. Te rog reporneste programul pentru a incerca din nou.";
+    switch (choice) {
+        case '1':
+            this->testAnimal();
+            break;
+        case '2':
+            this->testColonie();
+            break;
+        case '3':
+            this->testPlanta();
+            break;
+        case '4':
+            this->testSoi();
+            break;
+        case '5':
+            this->testEcosistem();
+            break;
+        case '6':
+            this->testEcosistemArtificial();
+            break;
         }
-    else throw "\nAi ales o optiune invalida. Te rog reporneste programul pentru a incerca din nou.";
     }
     catch (const char* error) {
         std::cout<<error;
