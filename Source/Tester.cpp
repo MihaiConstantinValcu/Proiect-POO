@@ -144,3 +144,9 @@ void Tester::testEcosistemArtificial(){
     test.simulareSchimbareClima(50);
     test.simulareSchimbareClima(float(50));
 }
+
+Tester* Tester::start_test() {
+    if(tester == nullptr)
+        tester = new Tester;
+    return tester;
+}
