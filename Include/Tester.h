@@ -1,6 +1,8 @@
 #pragma once
 
 #include "EcosistemArtificial.h"
+#include "AnimalFactory.h"
+#include "PlantaFactory.h"
 
 class Tester {
     Tester() = default;

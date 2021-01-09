@@ -42,12 +42,18 @@ void Tester::run() {
 }
 
 void Tester::testAnimal() {
-    Animal test("Vulpe", "Rosie", "Terestru", 2);
-    Animal testCopy = test;
+    Animal testAnimalTerestru = AnimalFactory::AnimalTerestru();
+    Animal testAnimalAcvatic = AnimalFactory::AnimalAcvatic();
+    Animal testCopy = testAnimalTerestru;
     testCopy.setSpecie("Urs");
     testCopy.setRasa("Grizzly");
     testCopy.setTip("Terestru");
     testCopy.setVarsta(13);
+    std::cout << "\nAnimalul initial:\n";
+    std::cout << "\nSpecie: " << testAnimalTerestru.getSpecie() << "\nRasa: " << testAnimalTerestru.getRasa()
+              << "\nTip: "
+              << testAnimalTerestru.getTip() << "\nVarsta: " << testAnimalTerestru.getVarsta() << "\n\n";
+    std::cout << "Copia animalului dupa setteri:\n";
     std::cout << "\nSpecie: " << testCopy.getSpecie() << "\nRasa: " << testCopy.getRasa() << "\nTip: "
               << testCopy.getTip() << "\nVarsta: " << testCopy.getVarsta() << "\n";
 }
@@ -60,11 +66,17 @@ void Tester::testColonie() {
 }
 
 void Tester::testPlanta() {
-    Planta test("Iarba", "Verde", "Terestru");
-    Planta testCopy = test;
+    Planta testPlantaTerestra = PlantaFactory::PlantaTerestra();
+    Planta testPlantaAcvatica = PlantaFactory::PlantaAcvatica();
+    Planta testCopy(testPlantaAcvatica);
     testCopy.setSpecie("Papadie");
     testCopy.setTip("Terestru");
     testCopy.setCuloare("Galbena");
+    std::cout << "\nPlanta initiala:";
+    std::cout << "\nSpecie: " << testPlantaAcvatica.getSpecie() << "\nCuloare: " << testPlantaAcvatica.getCuloare()
+              << "\nTip: "
+              << testPlantaAcvatica.getTip() << "\n\n";
+    std::cout << "Copia plantei dupa setteri:\n";
     std::cout << "\nSpecie: " << testCopy.getSpecie() << "\nCuloare: " << testCopy.getCuloare() << "\nTip: "
               << testCopy.getTip() << "\n";
 }
