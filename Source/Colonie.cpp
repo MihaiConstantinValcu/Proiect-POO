@@ -1,13 +1,13 @@
 #include "../Include/Colonie.h"
 
-Colonie::Colonie(Animal animal, int nr){
+Colonie::Colonie(Animal animal, int nr) {
     this->animal = animal;
     this->numar_indivizi = nr;
 }
 
 std::ostream &operator<<(std::ostream &os, Colonie &colonie) {
 
-    os<<colonie.animal.getSpecie()<<' '<<colonie.animal.getRasa()<<": "<<colonie.numar_indivizi<<std::endl;
+    os << colonie.animal.getSpecie() << ' ' << colonie.animal.getRasa() << ": " << colonie.numar_indivizi << std::endl;
     return os;
 }
 
@@ -18,6 +18,6 @@ int Colonie::getNumar() const {
 
 //Setters
 
-void Colonie::setNumar(const int _numar){
+void Colonie::setNumar(const int _numar) {
     this->numar_indivizi = _numar;
 }

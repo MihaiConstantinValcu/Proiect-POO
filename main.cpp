@@ -1,6 +1,6 @@
 #include "Include/Tester.h"
 
-Tester* Tester::tester = nullptr;
+Tester *Tester::tester = nullptr;
 
 int main() {
     auto Test = Tester::start_test();

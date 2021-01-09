@@ -1,8 +1,9 @@
 #include "../Include/Animal.h"
 
-Animal::Animal(std::string _specie, std::string _rasa, std::string _tip, int _varsta) : specie(_specie), rasa(_rasa), tip(_tip), varsta(_varsta){}
+Animal::Animal(std::string _specie, std::string _rasa, std::string _tip, int _varsta) : specie(_specie), rasa(_rasa),
+                                                                                        tip(_tip), varsta(_varsta) {}
 
-Animal& Animal::operator=(Animal& a){
+Animal &Animal::operator=(Animal &a) {
     this->specie = a.specie;
     this->rasa = a.rasa;
     this->varsta = a.varsta;
@@ -31,18 +32,18 @@ int Animal::getVarsta() const {
 
 //Setters
 
-void Animal::setSpecie(const std::string _specie){
+void Animal::setSpecie(const std::string _specie) {
     this->specie = _specie;
 }
 
-void Animal::setRasa(const std::string _rasa){
+void Animal::setRasa(const std::string _rasa) {
     this->rasa = _rasa;
 }
 
-void Animal::setTip(const std::string _tip){
+void Animal::setTip(const std::string _tip) {
     this->tip = _tip;
 }
 
-void Animal::setVarsta(const int _varsta){
+void Animal::setVarsta(const int _varsta) {
     this->varsta = _varsta;
 }

@@ -1,7 +1,8 @@
 #pragma once
+
 #include <iostream>
 
-class Planta{
+class Planta {
 
     std::string specie;
     std::string culoare;
@@ -10,18 +11,24 @@ class Planta{
 
 public:
     Planta(std::string = "", std::string = "", std::string = "");
-    Planta& operator=(Planta&);
+
+    Planta &operator=(Planta &);
+
     ~Planta();
 
     //Getters
     std::string getSpecie() const;
+
     std::string getCuloare() const;
+
     std::string getTip() const;
 
     //Setters
 
     void setSpecie(const std::string);
+
     void setCuloare(const std::string);
+
     void setTip(const std::string);
 
 };
