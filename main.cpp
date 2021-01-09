@@ -4,8 +4,13 @@ Tester *Tester::tester = nullptr;
 
 int main() {
     auto Test = Tester::start_test();
-    Test->run();
-    //disparitie() din Ecosistem da segmentation error daca rulez programul de 2 ori sau mai mult, l-am lasat comentat in Tester.cpp
+
+    try {
+        Test->run();
+    }
+    catch (const char *eroare) {
+        std::cout << eroare;
+    }
 
     return 0;
 }

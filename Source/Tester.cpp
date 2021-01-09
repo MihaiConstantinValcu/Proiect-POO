@@ -10,34 +10,28 @@ void Tester::run() {
     std::cout << "Alege ce doresti sa testezi:" << "\n1. Clasa Animal" << "\n2. Clasa Colonie" << "\n3. Clasa Planta"
               << "\n4. Clasa Soi" << "\n5. Clasa Ecosistem" << "\n6. Clasa EcosistemArtificial\n";
     char choice = '0';
-    try {
-        std::cin >> choice;
-        if (choice < '1' || choice > '6')
-            throw "\nAi ales o optiune invalida. Te rog reporneste programul pentru a incerca din nou.";
-        switch (choice) {
-            case '1':
-                this->testAnimal();
-                break;
-            case '2':
-                this->testColonie();
-                break;
-            case '3':
-                this->testPlanta();
-                break;
-            case '4':
-                this->testSoi();
-                break;
-            case '5':
-                this->testEcosistem();
-                break;
-            case '6':
-                this->testEcosistemArtificial();
-                break;
-        }
-    }
-    catch (const char *error) {
-        std::cout << error;
-        return;
+    std::cin >> choice;
+    if (choice < '1' || choice > '6')
+        throw "\nAi ales o optiune invalida. Te rog reporneste programul pentru a incerca din nou.";
+    switch (choice) {
+        case '1':
+            this->testAnimal();
+            break;
+        case '2':
+            this->testColonie();
+            break;
+        case '3':
+            this->testPlanta();
+            break;
+        case '4':
+            this->testSoi();
+            break;
+        case '5':
+            this->testEcosistem();
+            break;
+        case '6':
+            this->testEcosistemArtificial();
+            break;
     }
 }
 
@@ -93,19 +87,14 @@ void Tester::testEcosistem() {
     int choice;
     std::cout << "\nAlege un sablon:\n1. Ecosistem Terestru\n2. Ecosistem Acvativ.\n";
     std::cin >> choice;
-    try {
-        if (choice == 1) {
-            inputAnimale = "Date/animaleTerestre.txt";
-            inputPlante = "Date/planteTerestre.txt";
-        } else if (choice == 2) {
-            inputAnimale = "Date/animaleAcvatice.txt";
-            inputPlante = "Date/planteAcvatice.txt";
-        } else throw "Nu ai ales un sablon existent. Te rog reporneste programul pentru a incerca din nou.";
-    }
-    catch (const char *eroare) {
-        std::cout << eroare;
-        return;
-    }
+    if (choice == 1) {
+        inputAnimale = "Date/animaleTerestre.txt";
+        inputPlante = "Date/planteTerestre.txt";
+    } else if (choice == 2) {
+        inputAnimale = "Date/animaleAcvatice.txt";
+        inputPlante = "Date/planteAcvatice.txt";
+    } else throw "Nu ai ales un sablon existent. Te rog reporneste programul pentru a incerca din nou.";
+
 
     Ecosistem test(0, 0, 0, "Ploaie", inputAnimale, inputPlante);
     Ecosistem testCopy(test);
@@ -142,7 +131,7 @@ void Tester::testEcosistemArtificial() {
     } else if (choice == 2) {
         inputAnimale = "Date/animaleAcvatice.txt";
         inputPlante = "Date/planteAcvatice.txt";
-    }
+    } else throw "Nu ai ales un sablon existent. Te rog reporneste programul pentru a incerca din nou.";
 
     Ecosistem test(0, 0, 0, "Ploaie", inputAnimale, inputPlante);
     test.setSuprafata(2000);
